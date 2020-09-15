@@ -9,4 +9,10 @@
 
 """
 
+
 mac = "AAAA:BBBB:CCCC"
+mac1 = mac.split(':')
+mac2 = str(bin(int(mac1[0],16 )))
+mac3 = mac2.replace('0b', '')
+print(mac3)
+

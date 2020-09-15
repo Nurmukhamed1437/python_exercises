@@ -12,5 +12,12 @@ Outbound Interface    FastEthernet0/0
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
-
 ospf_route = "      10.0.24.0/24 [110/41] via 10.0.13.3, 3d18h, FastEthernet0/0"
+ospf_splited = ospf_route.split()
+parameters = " Prefix AD/METRIC Next-Hop LastUpdate Outbound Interface"
+parameters_splited = parameters.split()
+print(parameters_splited)
+
+
+a=f"Prefix: {ospf_splited[0]}, AD/METRIC: {ospf_splited[1]}, Next-hop: {ospf_splited[3]}, Last update: {ospf_splited[4]}, Outbound Interface: {ospf_splited[5]}"
+print(a)
