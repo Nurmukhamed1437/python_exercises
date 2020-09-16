@@ -21,10 +21,8 @@
 
 ip = "192.168.3.1"
 ip_spl = ip.split('.')
-ip1 = int(ip_spl[0])
-ip2 = int(ip_spl[1])
-ip3 = int(ip_spl[2])
-ip4 = int(ip_spl[3])
-print(f'''
-{ip1:<8} {ip2:<8} {ip3:<8} {ip4:<8}
-{ip1:08b} {ip2:08b} {ip3:08b} {ip4:08b}''')
+ip1 = ip_spl[0]
+ip2 = ip_spl[1]
+ip3 = ip_spl[2]
+ip4 = ip_spl[3]
+print('{}'.format(ip1,'    '), '{}'.format(ip2,'     '))
