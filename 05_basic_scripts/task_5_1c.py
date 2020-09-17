@@ -49,3 +49,10 @@ london_co = {
         "routing": True,
     },
 }
+
+a = input("Введите имя оборудования: ")
+b = london_co[a]
+c = list(b.keys())
+d = ','.join(c)
+e = input("Введите нужный параметр :"+d+'   ')
+print(london_co[a].get(e,'Takogo parametra net'))
