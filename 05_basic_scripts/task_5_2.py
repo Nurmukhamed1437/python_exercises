@@ -48,11 +48,10 @@ print(mask1)
 print(f'''
 Network:
 {ip1:<8} {ip2:<8} {ip3:<8} {ip4:<8}
-{ip1:<08b} {ip2:<08b} {ip3:<08b} {ip4:<08b}
+{ip1:08b} {ip2:08b} {ip3:08b} {ip4:08b}
 
 Mask:
 {mask1:<8} {mask2:<8} {mask3:<8} {mask4:<8}
-{mask1:<08b} {mask2:<08b} {mask3:<08b} {mask4:<08b}
-
+{mask1:08b} {mask2:08b} {mask3:08b} {mask4:08b}
 
 ''')

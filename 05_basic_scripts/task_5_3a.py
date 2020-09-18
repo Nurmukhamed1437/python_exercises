@@ -11,8 +11,19 @@
 То есть эту задачу можно решить без использования условия if и циклов for/while.
 """
 
+
+interface = input("Введите режим работы интерфейса (access/trunk): ")
+type_number = input("Введите тип и номер интерфейса: ")
+
+vopros ={'access': 'Введите номер VLAN:',
+         'trunk' : 'Введите разрешенные VLAN:'
+
+}
+
+q = str(input(vopros[interface]))
+print(q)
 access_template = [
-    "switchport mode access",
+    "switchport mode access" ,
     "switchport access vlan {}",
     "switchport nonegotiate",
     "spanning-tree portfast",
@@ -22,5 +33,18 @@ access_template = [
 trunk_template = [
     "switchport trunk encapsulation dot1q",
     "switchport mode trunk",
-    "switchport trunk allowed vlan {}",
+    "switchport trunk allowed vlan {}"
 ]
+
+dictionary = {'access': access_template,
+              'trunk': trunk_template
+}
+
+print("interface:" + interface)
+a = str(dictionary[interface])
+c = a.replace("'",'')
+d = c.replace("[",'')
+d = d.replace("]",'')
+e = d.replace(",","\n")
+z = e.replace("{}", q)
+print(z)
