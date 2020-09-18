@@ -25,6 +25,7 @@ ip1 = int(ip_spl[0])
 ip2 = int(ip_spl[1])
 ip3 = int(ip_spl[2])
 ip4 = int(ip_spl[3])
+print(ip_spl)
 print(f'''
 {ip1:<8} {ip2:<8} {ip3:<8} {ip4:<8}
 {ip1:08b} {ip2:08b} {ip3:08b} {ip4:08b}''')
